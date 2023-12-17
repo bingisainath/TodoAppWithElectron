@@ -1,0 +1,46 @@
+<!-- 
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Login</h2>
+      <input type="text" placeholder="Username" id="username" />
+      <input type="password" placeholder="Password" id="password" />
+      <button onclick="handleLogin()">Login</button>
+      <script>
+        const handleLogin = () => {
+          console.log("Login Pressed");
+          // window.electron.sendToMain("attemptLogin", {
+          //   username: document.getElementById("username").value,
+          //   password: document.getElementById("password").value,
+          // });
+          window.electron.login.closeLoginWindow({
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+          });
+        };
+      </script>
+    </div>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- Add necessary scripts for React, ReactDOM, and Babel Standalone -->
+    <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="./src//db//firestore.js"></script>
+    <!-- Include your separate login.js file -->
+    <script type="text/babel" src="login.js"></script>
+  </body>
+</html>
